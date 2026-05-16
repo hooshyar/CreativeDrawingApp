@@ -1,0 +1,339 @@
+{
+  "" : {
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CreativeDrawing-primary.dia",
+    "emit-module-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CreativeDrawing-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CreativeDrawing-primary-emit-module.dia",
+    "pch" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CreativeDrawing-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CreativeDrawing-primary.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Animation/AnimationEngine.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationEngine~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Animation/PlaybackCanvas.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackCanvas~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Animation/PlaybackEngine.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackEngine~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Animation/StrokeAnimator.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StrokeAnimator~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/AppDelegate.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AppDelegate~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/DrawingViewController.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingViewController~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/ExportConfiguration.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/FrameCapturer.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/GIFExporter.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/VideoExporter.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/GameViewController.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GameViewController~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Managers/CustomStickerManager.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/CustomStickerManager~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Managers/DrawingStorage.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingStorage~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Managers/SoundManager.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/SoundManager~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/ColorPalette.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPalette~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/DrawingDocument.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingDocument~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/DrawingMetadata.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingMetadata~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/FillRegion.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FillRegion~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/Stamp.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/Stroke.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Renderer.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Renderer~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Utilities/BrushRenderer.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/AnimationPreviewController.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/AnimationPreviewController~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/BackgroundPickerView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BackgroundPickerView~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/BrushSizeControl.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushSizeControl~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/ColorPaletteView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/DrawingCanvas.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/ExportProgressView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/GalleryView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GalleryView~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/PlaybackControlsView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/PlaybackControlsView~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/StampPickerView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/StampPickerView~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/ToolbarView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ToolbarView~partial.swiftmodule"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  }
+}

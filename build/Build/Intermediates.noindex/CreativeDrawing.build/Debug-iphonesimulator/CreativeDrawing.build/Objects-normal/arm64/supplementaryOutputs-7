@@ -1,0 +1,23 @@
+{
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/ColorPaletteView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ColorPaletteView.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/DrawingCanvas.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/DrawingCanvas.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Views/ExportProgressView.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportProgressView.swiftdeps"
+  }
+}

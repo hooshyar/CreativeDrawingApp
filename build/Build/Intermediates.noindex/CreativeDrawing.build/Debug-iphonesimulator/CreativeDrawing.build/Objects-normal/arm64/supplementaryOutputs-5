@@ -1,0 +1,23 @@
+{
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/Stamp.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stamp.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Models/Stroke.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/Stroke.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Utilities/BrushRenderer.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/BrushRenderer.swiftdeps"
+  }
+}

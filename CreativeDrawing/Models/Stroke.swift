@@ -28,6 +28,7 @@ enum BrushType: String, CaseIterable {
     case crayon = "crayon"
     case sparkle = "sparkle"
     case rainbow = "rainbow"
+    case spray = "spray"
     case eraser = "eraser"
 
     var displayName: String {
@@ -37,6 +38,7 @@ enum BrushType: String, CaseIterable {
         case .crayon: return "Crayon"
         case .sparkle: return "Sparkle"
         case .rainbow: return "Rainbow"
+        case .spray: return "Spray"
         case .eraser: return "Eraser"
         }
     }
@@ -48,6 +50,7 @@ enum BrushType: String, CaseIterable {
         case .crayon: return "paintbrush.fill"
         case .sparkle: return "sparkles"
         case .rainbow: return "rainbow"
+        case .spray: return "aqi.medium"
         case .eraser: return "eraser.fill"
         }
     }
@@ -59,6 +62,7 @@ enum BrushType: String, CaseIterable {
         case .crayon: return 16
         case .sparkle: return 20
         case .rainbow: return 24
+        case .spray: return 30
         case .eraser: return 40
         }
     }
@@ -70,6 +74,7 @@ enum BrushType: String, CaseIterable {
         case .crayon: return 0.9
         case .sparkle: return 1.0
         case .rainbow: return 1.0
+        case .spray: return 1.0
         case .eraser: return 1.0
         }
     }

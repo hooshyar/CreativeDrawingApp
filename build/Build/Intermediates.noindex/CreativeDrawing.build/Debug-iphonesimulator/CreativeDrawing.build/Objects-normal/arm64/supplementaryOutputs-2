@@ -1,0 +1,30 @@
+{
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/ExportConfiguration.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/ExportConfiguration.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/FrameCapturer.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/FrameCapturer.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/GIFExporter.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/GIFExporter.swiftdeps"
+  },
+  "/Users/hooshyar/Desktop/development/CreativeDrawing/CreativeDrawing/Export/VideoExporter.swift" : {
+    "const-values" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.swiftconstvalues",
+    "dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.d",
+    "diagnostics" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.dia",
+    "object" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.o",
+    "swift-dependencies" : "/Users/hooshyar/Desktop/development/CreativeDrawing/build/Build/Intermediates.noindex/CreativeDrawing.build/Debug-iphonesimulator/CreativeDrawing.build/Objects-normal/arm64/VideoExporter.swiftdeps"
+  }
+}

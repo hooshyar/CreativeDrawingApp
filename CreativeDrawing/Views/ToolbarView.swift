@@ -16,8 +16,9 @@ protocol ToolbarDelegate: AnyObject {
     func toolbarDidTapStamps(_ toolbar: ToolbarView)
     func toolbarDidTapGallery(_ toolbar: ToolbarView)
     func toolbarDidTapBackground(_ toolbar: ToolbarView)
-    func toolbarDidTapFill(_ toolbar: ToolbarView)
     func toolbarDidTapSymmetry(_ toolbar: ToolbarView)
+    func toolbarDidTapAnimation(_ toolbar: ToolbarView)
+    func toolbarDidTapDarkMode(_ toolbar: ToolbarView)
 }
 
 class ToolbarView: UIView {
@@ -55,8 +56,9 @@ class ToolbarView: UIView {
     private let stampButton = ToolButton(icon: "star.fill", title: "Stickers")
     private let galleryButton = ToolButton(icon: "photo.on.rectangle", title: "Gallery")
     private let backgroundButton = ToolButton(icon: "paintpalette.fill", title: "Canvas")
-    private let fillButton = ToolButton(icon: "paintbrush.pointed.fill", title: "Fill")
     private let symmetryButton = ToolButton(icon: "rectangle", title: "Symmetry")
+    private let animationButton = ToolButton(icon: "play.circle", title: "Animate")
+    private let darkModeButton = ToolButton(icon: "moon", title: "Dark")
 
     /// Track if we're on a compact device
     private var isCompact: Bool {
@@ -141,11 +143,14 @@ class ToolbarView: UIView {
         backgroundButton.addTarget(self, action: #selector(backgroundTapped), for: .touchUpInside)
         backgroundButton.iconTint = .systemOrange
 
-        fillButton.addTarget(self, action: #selector(fillTapped), for: .touchUpInside)
-        fillButton.iconTint = .systemCyan
-
         symmetryButton.addTarget(self, action: #selector(symmetryTapped), for: .touchUpInside)
         symmetryButton.iconTint = .systemTeal
+
+        animationButton.addTarget(self, action: #selector(animationTapped), for: .touchUpInside)
+        animationButton.iconTint = .systemGreen
+
+        darkModeButton.addTarget(self, action: #selector(darkModeTapped), for: .touchUpInside)
+        darkModeButton.iconTint = .systemIndigo
 
         undoButton.addTarget(self, action: #selector(undoTapped), for: .touchUpInside)
         redoButton.addTarget(self, action: #selector(redoTapped), for: .touchUpInside)
@@ -170,7 +175,7 @@ class ToolbarView: UIView {
             button.buttonSize = buttonSize
         }
 
-        [stampButton, galleryButton, backgroundButton, fillButton, symmetryButton, undoButton, redoButton, clearButton, saveButton].forEach {
+        [stampButton, galleryButton, backgroundButton, symmetryButton, animationButton, darkModeButton, undoButton, redoButton, clearButton, saveButton].forEach {
             $0.showLabel = showLabels
             $0.buttonSize = buttonSize
         }
@@ -197,10 +202,11 @@ class ToolbarView: UIView {
         contentStackView.addArrangedSubview(separator2)
 
         // Add action buttons
-        contentStackView.addArrangedSubview(fillButton)
         contentStackView.addArrangedSubview(symmetryButton)
+        contentStackView.addArrangedSubview(animationButton)
         contentStackView.addArrangedSubview(galleryButton)
         contentStackView.addArrangedSubview(backgroundButton)
+        contentStackView.addArrangedSubview(darkModeButton)
         contentStackView.addArrangedSubview(stampButton)
 
         // Add separator
@@ -278,18 +284,47 @@ class ToolbarView: UIView {
         SoundManager.shared.playHaptic(.light)
     }
 
-    @objc private func fillTapped() {
-        delegate?.toolbarDidTapFill(self)
-        animateButtonTap(fillButton)
-        SoundManager.shared.play(.tap)
-        SoundManager.shared.playHaptic(.light)
-    }
-
     @objc private func symmetryTapped() {
         delegate?.toolbarDidTapSymmetry(self)
         animateButtonTap(symmetryButton)
         SoundManager.shared.play(.tap)
         SoundManager.shared.playHaptic(.selection)
+    }
+
+    @objc private func animationTapped() {
+        delegate?.toolbarDidTapAnimation(self)
+        animateButtonTap(animationButton)
+        SoundManager.shared.play(.tap)
+        SoundManager.shared.playHaptic(.light)
+    }
+
+    @objc private func darkModeTapped() {
+        delegate?.toolbarDidTapDarkMode(self)
+        animateButtonTap(darkModeButton)
+        SoundManager.shared.play(.tap)
+        SoundManager.shared.playHaptic(.selection)
+    }
+
+    /// Update dark mode button appearance based on state
+    func updateDarkModeButton(isDarkMode: Bool) {
+        let iconConfig = UIImage.SymbolConfiguration(pointSize: darkModeButton.showLabel ? 22 : 24, weight: .medium)
+        var config = darkModeButton.configuration ?? UIButton.Configuration.plain()
+        config.image = UIImage(systemName: isDarkMode ? "moon.fill" : "moon", withConfiguration: iconConfig)
+
+        if darkModeButton.showLabel {
+            config.title = "Dark"
+        }
+
+        darkModeButton.configuration = config
+
+        // Highlight when dark mode is active
+        if isDarkMode {
+            darkModeButton.backgroundColor = UIColor.systemIndigo.withAlphaComponent(0.15)
+            darkModeButton.tintColor = .systemIndigo
+        } else {
+            darkModeButton.backgroundColor = .clear
+            darkModeButton.tintColor = .systemIndigo
+        }
     }
 
     /// Update symmetry button appearance based on mode

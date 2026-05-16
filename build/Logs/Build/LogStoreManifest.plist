@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>50090827-13FF-4A98-BBA6-E890726EEDEC</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>50090827-13FF-4A98-BBA6-E890726EEDEC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>1</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CreativeDrawing project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CreativeDrawing</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project CreativeDrawing with scheme CreativeDrawing</string>
+			<key>timeStartedRecording</key>
+			<real>790867393.31283104</real>
+			<key>timeStoppedRecording</key>
+			<real>790867402.30271101</real>
+			<key>title</key>
+			<string>Building project CreativeDrawing with scheme CreativeDrawing</string>
+			<key>uniqueIdentifier</key>
+			<string>50090827-13FF-4A98-BBA6-E890726EEDEC</string>
+		</dict>
+		<key>9F7947C1-F5CD-42E7-8517-767997D84FD2</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>9F7947C1-F5CD-42E7-8517-767997D84FD2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>1</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CreativeDrawing project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CreativeDrawing</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project CreativeDrawing with scheme CreativeDrawing</string>
+			<key>timeStartedRecording</key>
+			<real>790860801.74722695</real>
+			<key>timeStoppedRecording</key>
+			<real>790860809.62744999</real>
+			<key>title</key>
+			<string>Building project CreativeDrawing with scheme CreativeDrawing</string>
+			<key>uniqueIdentifier</key>
+			<string>9F7947C1-F5CD-42E7-8517-767997D84FD2</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

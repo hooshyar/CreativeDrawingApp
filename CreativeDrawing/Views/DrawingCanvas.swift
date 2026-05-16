@@ -17,7 +17,6 @@ protocol DrawingCanvasDelegate: AnyObject {
 enum DrawingMode {
     case draw
     case stamp(StampType)
-    case fill
 }
 
 /// Symmetry modes for mirrored drawing
@@ -94,6 +93,67 @@ class DrawingCanvas: UIView {
     /// Rainbow color index for rainbow brush
     private var rainbowColorIndex: Int = 0
     private let rainbowColors = ColorPalette.rainbowGradientColors(count: 360)
+
+    // MARK: - Animation Properties
+
+    /// Display link for animation loop
+    private var displayLink: CADisplayLink?
+
+    /// Time when animation started
+    private var animationStartTime: CFTimeInterval = 0
+
+    /// Whether live effects (twinkling sparkles, rainbow shimmer) are enabled
+    var liveEffectsEnabled: Bool = true {
+        didSet {
+            if liveEffectsEnabled {
+                startAnimationLoopIfNeeded()
+            } else {
+                stopAnimationLoop()
+                // Force cache update to render static versions
+                needsCacheUpdate = true
+                setNeedsDisplay()
+            }
+        }
+    }
+
+    /// Whether there are any animated strokes in the document
+    private var hasAnimatedStrokes: Bool {
+        return document.strokes.contains { $0.brushType == .sparkle || $0.brushType == .rainbow }
+    }
+
+    /// When both animated AND eraser strokes exist, we must render all strokes each frame
+    /// to maintain correct chronological eraser behavior
+    private var shouldRenderAllStrokesEachFrame: Bool {
+        guard liveEffectsEnabled else { return false }
+        let hasAnimated = hasAnimatedStrokes
+        let hasErasers = document.strokes.contains { $0.brushType == .eraser }
+        return hasAnimated && hasErasers
+    }
+
+    /// Strokes that can be cached (rendered once until document changes)
+    /// When live effects enabled and no erasers: cache non-animated strokes
+    /// When live effects disabled OR no animated strokes: cache ALL strokes including erasers
+    private var cacheableStrokes: [Stroke] {
+        if shouldRenderAllStrokesEachFrame {
+            // Can't cache - need to render all strokes each frame for correct eraser behavior
+            return []
+        }
+
+        if liveEffectsEnabled {
+            // Cache non-animated strokes (erasers included - they'll be in the transparent cache)
+            return document.strokes.filter { $0.brushType != .sparkle && $0.brushType != .rainbow }
+        } else {
+            // Live effects disabled - cache ALL strokes
+            return document.strokes
+        }
+    }
+
+    /// Strokes that must be rendered each frame (only used when shouldRenderAllStrokesEachFrame is false)
+    private var liveStrokes: [Stroke] {
+        guard liveEffectsEnabled else { return [] }
+        // Only animated strokes need live rendering
+        return document.strokes.filter { $0.brushType == .sparkle || $0.brushType == .rainbow }
+    }
 
     // MARK: - Initialization
 
@@ -181,6 +241,51 @@ class DrawingCanvas: UIView {
         updateSymmetryGuide()
     }
 
+    // MARK: - Animation Loop
+
+    /// Start animation loop if needed (when there are animated strokes and live effects are enabled)
+    private func startAnimationLoopIfNeeded() {
+        guard liveEffectsEnabled, hasAnimatedStrokes, displayLink == nil else { return }
+
+        animationStartTime = CACurrentMediaTime()
+        displayLink = CADisplayLink(target: self, selector: #selector(animationTick(_:)))
+
+        if #available(iOS 15.0, *) {
+            displayLink?.preferredFrameRateRange = CAFrameRateRange(
+                minimum: 30,
+                maximum: 60,
+                preferred: 60
+            )
+        }
+
+        displayLink?.add(to: .main, forMode: .common)
+    }
+
+    /// Stop the animation loop
+    private func stopAnimationLoop() {
+        displayLink?.invalidate()
+        displayLink = nil
+    }
+
+    /// Called each frame during animation
+    @objc private func animationTick(_ link: CADisplayLink) {
+        // Only redraw if we have animated content
+        guard hasAnimatedStrokes else {
+            stopAnimationLoop()
+            return
+        }
+        setNeedsDisplay()
+    }
+
+    /// Check if animation loop should be running and update accordingly
+    private func updateAnimationLoopState() {
+        if liveEffectsEnabled && hasAnimatedStrokes {
+            startAnimationLoopIfNeeded()
+        } else {
+            stopAnimationLoop()
+        }
+    }
+
     // MARK: - Touch Handling
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -197,12 +302,6 @@ class DrawingCanvas: UIView {
         // Handle stamp mode
         if case .stamp(let stampType) = drawingMode {
             placeStamp(stampType, at: point)
-            return
-        }
-
-        // Handle fill mode
-        if case .fill = drawingMode {
-            performFill(at: point)
             return
         }
 
@@ -318,25 +417,50 @@ class DrawingCanvas: UIView {
             fill.filledImage.draw(at: .zero)
         }
 
-        // Draw cached image of completed strokes
-        if needsCacheUpdate {
-            updateCache()
+        // Handle stroke rendering based on caching strategy
+        if shouldRenderAllStrokesEachFrame {
+            // When both animated and eraser strokes exist, render ALL strokes each frame
+            // on a transparent buffer to maintain correct eraser behavior
+            let format = UIGraphicsImageRendererFormat()
+            format.opaque = false
+
+            let renderer = UIGraphicsImageRenderer(size: bounds.size, format: format)
+            let strokesImage = renderer.image { rendererContext in
+                let timeOffset = liveEffectsEnabled ? CACurrentMediaTime() - animationStartTime : 0
+                for stroke in document.strokes {
+                    drawStroke(stroke, in: rendererContext.cgContext, timeOffset: timeOffset)
+                }
+            }
+            strokesImage.draw(at: .zero)
+        } else {
+            // Use cached image for static strokes
+            if needsCacheUpdate {
+                updateCache()
+            }
+            cachedImage?.draw(at: .zero)
+
+            // Draw live strokes (animated) on top
+            if liveEffectsEnabled && !liveStrokes.isEmpty {
+                let timeOffset = CACurrentMediaTime() - animationStartTime
+                for stroke in liveStrokes {
+                    drawStroke(stroke, in: context, timeOffset: timeOffset)
+                }
+            }
         }
 
-        cachedImage?.draw(at: .zero)
-
-        // Draw stamps from document
+        // Draw stamps from document (stamps are not affected by eraser)
         for stamp in document.stamps {
             drawStamp(stamp, in: context)
         }
 
         // Draw current stroke (in progress)
         if let stroke = currentStroke {
-            drawStroke(stroke, in: context)
+            let timeOffset = liveEffectsEnabled ? CACurrentMediaTime() - animationStartTime : 0
+            drawStroke(stroke, in: context, timeOffset: timeOffset)
 
             // Also draw mirrored strokes in progress
             for mirroredStroke in mirroredStrokes {
-                drawStroke(mirroredStroke, in: context)
+                drawStroke(mirroredStroke, in: context, timeOffset: timeOffset)
             }
         }
     }
@@ -487,397 +611,27 @@ class DrawingCanvas: UIView {
     }
 
     private func updateCache() {
-        let renderer = UIGraphicsImageRenderer(size: bounds.size)
+        // Create transparent format - CRITICAL for eraser to work correctly
+        // Without this, eraser paints background color instead of truly erasing
+        let format = UIGraphicsImageRendererFormat()
+        format.opaque = false
+
+        let renderer = UIGraphicsImageRenderer(size: bounds.size, format: format)
         cachedImage = renderer.image { rendererContext in
-            for stroke in document.strokes {
+            // Render cacheable strokes in chronological order
+            // Erasers are included here and will punch holes in the transparent buffer
+            for stroke in cacheableStrokes {
                 drawStroke(stroke, in: rendererContext.cgContext)
             }
         }
         needsCacheUpdate = false
+
+        // Update animation loop state after cache update
+        updateAnimationLoopState()
     }
 
-    private func drawStroke(_ stroke: Stroke, in context: CGContext) {
-        guard stroke.points.count > 0 else { return }
-
-        context.saveGState()
-
-        // Configure stroke style
-        context.setLineCap(.round)
-        context.setLineJoin(.round)
-        context.setLineWidth(stroke.lineWidth)
-        context.setAlpha(stroke.brushType.opacity)
-
-        // Handle eraser
-        if stroke.brushType == .eraser {
-            context.setBlendMode(.clear)
-            context.setStrokeColor(UIColor.white.cgColor)
-        } else {
-            context.setStrokeColor(stroke.color.cgColor)
-        }
-
-        // Draw based on brush type
-        switch stroke.brushType {
-        case .pencil:
-            drawPencilStroke(stroke, in: context)
-        case .marker:
-            drawMarkerStroke(stroke, in: context)
-        case .crayon:
-            drawCrayonStroke(stroke, in: context)
-        case .sparkle:
-            drawSparkleStroke(stroke, in: context)
-        case .rainbow:
-            drawRainbowStroke(stroke, in: context)
-        case .eraser:
-            drawMarkerStroke(stroke, in: context)
-        }
-
-        context.restoreGState()
-    }
-
-    // MARK: - Brush Styles
-
-    private func drawPencilStroke(_ stroke: Stroke, in context: CGContext) {
-        // PENCIL: Realistic pencil with sketchy texture and variable pressure
-        let points = stroke.points
-        guard points.count > 0 else { return }
-
-        // Draw multiple thin lines for pencil texture effect
-        let baseColor = stroke.color
-        var r: CGFloat = 0, g: CGFloat = 0, b: CGFloat = 0, a: CGFloat = 0
-        baseColor.getRed(&r, green: &g, blue: &b, alpha: &a)
-
-        for pass in 0..<3 {
-            context.setLineWidth(stroke.lineWidth * 0.4)
-            context.setAlpha(0.5)
-
-            let offset = CGFloat(pass - 1) * 0.8
-
-            context.beginPath()
-            for (index, point) in points.enumerated() {
-                // Add sketchy variation based on position
-                let noise = deterministicNoise(point.position.x, point.position.y, seed: pass + index)
-                let sketchOffset = (noise - 0.5) * stroke.lineWidth * 0.5
-
-                let adjustedPoint = CGPoint(
-                    x: point.position.x + offset + sketchOffset,
-                    y: point.position.y + sketchOffset
-                )
-
-                if index == 0 {
-                    context.move(to: adjustedPoint)
-                } else {
-                    context.addLine(to: adjustedPoint)
-                }
-            }
-            context.strokePath()
-        }
-
-        // Add graphite grain texture
-        let smoothPoints = stroke.smoothedPoints(granularity: 2)
-        for (index, point) in smoothPoints.enumerated() where index % 3 == 0 {
-            let grainSize = stroke.lineWidth * 0.15
-            let noise = deterministicNoise(point.x, point.y, seed: index * 7)
-            if noise > 0.4 {
-                let grainRect = CGRect(
-                    x: point.x - grainSize / 2 + (noise - 0.5) * stroke.lineWidth,
-                    y: point.y - grainSize / 2 + (deterministicNoise(point.x, point.y, seed: index * 13) - 0.5) * stroke.lineWidth,
-                    width: grainSize,
-                    height: grainSize
-                )
-                context.setFillColor(baseColor.withAlphaComponent(0.3).cgColor)
-                context.fillEllipse(in: grainRect)
-            }
-        }
-    }
-
-    private func drawMarkerStroke(_ stroke: Stroke, in context: CGContext) {
-        // MARKER: Bold, smooth chisel-tip effect with soft edges
-        let points = stroke.smoothedPoints(granularity: 4)
-        guard points.count > 1 else { return }
-
-        // Draw a thick soft glow underneath for marker bleed effect
-        context.setLineWidth(stroke.lineWidth * 1.3)
-        context.setAlpha(0.3)
-        context.setStrokeColor(stroke.color.cgColor)
-
-        context.beginPath()
-        context.move(to: points[0])
-        for point in points.dropFirst() {
-            context.addLine(to: point)
-        }
-        context.strokePath()
-
-        // Main marker stroke - bold and saturated
-        context.setLineWidth(stroke.lineWidth)
-        context.setAlpha(0.85)
-        context.setStrokeColor(stroke.color.cgColor)
-
-        context.beginPath()
-        context.move(to: points[0])
-        for point in points.dropFirst() {
-            context.addLine(to: point)
-        }
-        context.strokePath()
-
-        // Add highlight streak for glossy marker effect
-        context.setLineWidth(stroke.lineWidth * 0.3)
-        context.setAlpha(0.4)
-        context.setStrokeColor(UIColor.white.cgColor)
-
-        context.beginPath()
-        let highlightOffset: CGFloat = -stroke.lineWidth * 0.25
-        for (index, point) in points.enumerated() {
-            let adjustedPoint = CGPoint(x: point.x + highlightOffset, y: point.y + highlightOffset)
-            if index == 0 {
-                context.move(to: adjustedPoint)
-            } else {
-                context.addLine(to: adjustedPoint)
-            }
-        }
-        context.strokePath()
-    }
-
-    private func drawCrayonStroke(_ stroke: Stroke, in context: CGContext) {
-        // CRAYON: Waxy texture with visible paper grain showing through
-        let points = stroke.smoothedPoints(granularity: 2)
-        guard points.count > 1 else { return }
-
-        // Draw multiple waxy layers with texture gaps (paper showing through)
-        for layer in 0..<4 {
-            let layerOffset = CGFloat(layer - 2) * stroke.lineWidth * 0.15
-
-            context.setLineWidth(stroke.lineWidth * 0.9)
-            context.setAlpha(0.4)
-            context.setStrokeColor(stroke.color.cgColor)
-
-            context.beginPath()
-            for (index, point) in points.enumerated() {
-                let noise1 = deterministicNoise(point.x, point.y, seed: layer * 100 + index)
-                let noise2 = deterministicNoise(point.y, point.x, seed: layer * 200 + index)
-
-                let waxyOffset = CGPoint(
-                    x: (noise1 - 0.5) * stroke.lineWidth * 0.4 + layerOffset,
-                    y: (noise2 - 0.5) * stroke.lineWidth * 0.4
-                )
-
-                let adjustedPoint = CGPoint(x: point.x + waxyOffset.x, y: point.y + waxyOffset.y)
-
-                if index == 0 {
-                    context.move(to: adjustedPoint)
-                } else {
-                    context.addLine(to: adjustedPoint)
-                }
-            }
-            context.strokePath()
-        }
-
-        // Add waxy dots for that crayon texture
-        for (index, point) in points.enumerated() where index % 2 == 0 {
-            let noise = deterministicNoise(point.x * 2, point.y * 2, seed: index)
-
-            // Only draw some dots (simulate paper texture showing through)
-            if noise > 0.3 {
-                let dotSize = stroke.lineWidth * (0.2 + noise * 0.3)
-                let offsetX = (deterministicNoise(point.x, point.y, seed: index * 3) - 0.5) * stroke.lineWidth * 0.8
-                let offsetY = (deterministicNoise(point.y, point.x, seed: index * 5) - 0.5) * stroke.lineWidth * 0.8
-
-                let dotRect = CGRect(
-                    x: point.x - dotSize / 2 + offsetX,
-                    y: point.y - dotSize / 2 + offsetY,
-                    width: dotSize,
-                    height: dotSize
-                )
-
-                context.setFillColor(stroke.color.withAlphaComponent(0.5 + noise * 0.3).cgColor)
-                context.fillEllipse(in: dotRect)
-            }
-        }
-    }
-
-    /// Deterministic pseudo-random noise based on position (consistent across redraws)
-    private func deterministicNoise(_ x: CGFloat, _ y: CGFloat, seed: Int) -> CGFloat {
-        let n = Int(x * 374761393 + y * 668265263 + CGFloat(seed) * 1013904223)
-        let hash = (n ^ (n >> 13)) &* 1274126177
-        return CGFloat(abs(hash) % 10000) / 10000.0
-    }
-
-    private func drawSparkleStroke(_ stroke: Stroke, in context: CGContext) {
-        // SPARKLE: Magical glitter trail with stars, sparkles and glow
-        let points = stroke.smoothedPoints(granularity: 3)
-        guard points.count > 1 else { return }
-
-        // Draw glowing base line
-        context.setLineWidth(stroke.lineWidth * 1.5)
-        context.setAlpha(0.3)
-        context.setStrokeColor(stroke.color.cgColor)
-
-        context.beginPath()
-        context.move(to: points[0])
-        for point in points.dropFirst() {
-            context.addLine(to: point)
-        }
-        context.strokePath()
-
-        // Core line with sparkle color
-        context.setLineWidth(stroke.lineWidth * 0.6)
-        context.setAlpha(0.9)
-        context.setStrokeColor(stroke.color.cgColor)
-
-        context.beginPath()
-        context.move(to: points[0])
-        for point in points.dropFirst() {
-            context.addLine(to: point)
-        }
-        context.strokePath()
-
-        // Add magical sparkles and stars along the path
-        let rawPoints = stroke.points
-        for (index, point) in rawPoints.enumerated() {
-            let noise = deterministicNoise(point.position.x, point.position.y, seed: index)
-
-            // Every point gets some sparkle effect
-            if index % 3 == 0 {
-                // Draw 4-point star sparkle
-                let starSize = stroke.lineWidth * (0.5 + noise * 1.0)
-                drawStar(at: point.position, size: starSize, color: UIColor.white, in: context)
-
-                // Add colored glow around star
-                let glowSize = starSize * 2.5
-                let glowRect = CGRect(
-                    x: point.position.x - glowSize / 2,
-                    y: point.position.y - glowSize / 2,
-                    width: glowSize,
-                    height: glowSize
-                )
-                context.setFillColor(stroke.color.withAlphaComponent(0.2).cgColor)
-                context.fillEllipse(in: glowRect)
-            }
-
-            // Scatter small glitter particles
-            if index % 2 == 0 {
-                let scatterCount = 2 + Int(noise * 3)
-                for scatter in 0..<scatterCount {
-                    let scatterNoise1 = deterministicNoise(point.position.x, point.position.y, seed: index * 10 + scatter)
-                    let scatterNoise2 = deterministicNoise(point.position.y, point.position.x, seed: index * 20 + scatter)
-
-                    let offsetX = (scatterNoise1 - 0.5) * stroke.lineWidth * 2.5
-                    let offsetY = (scatterNoise2 - 0.5) * stroke.lineWidth * 2.5
-
-                    let particleSize = stroke.lineWidth * (0.1 + scatterNoise1 * 0.25)
-                    let particleRect = CGRect(
-                        x: point.position.x + offsetX - particleSize / 2,
-                        y: point.position.y + offsetY - particleSize / 2,
-                        width: particleSize,
-                        height: particleSize
-                    )
-
-                    // Alternate between white and colored particles
-                    let particleColor = scatter % 2 == 0 ? UIColor.white : stroke.color
-                    context.setFillColor(particleColor.withAlphaComponent(0.7 + scatterNoise1 * 0.3).cgColor)
-                    context.fillEllipse(in: particleRect)
-                }
-            }
-        }
-    }
-
-    /// Draw a 4-point star at the given position
-    private func drawStar(at center: CGPoint, size: CGFloat, color: UIColor, in context: CGContext) {
-        context.saveGState()
-
-        let outerRadius = size
-        let innerRadius = size * 0.4
-
-        context.setFillColor(color.withAlphaComponent(0.95).cgColor)
-
-        let path = CGMutablePath()
-        let points = 4
-
-        for i in 0..<(points * 2) {
-            let radius = i % 2 == 0 ? outerRadius : innerRadius
-            let angle = CGFloat(i) * .pi / CGFloat(points) - .pi / 2
-
-            let x = center.x + radius * cos(angle)
-            let y = center.y + radius * sin(angle)
-
-            if i == 0 {
-                path.move(to: CGPoint(x: x, y: y))
-            } else {
-                path.addLine(to: CGPoint(x: x, y: y))
-            }
-        }
-        path.closeSubpath()
-
-        context.addPath(path)
-        context.fillPath()
-
-        context.restoreGState()
-    }
-
-    private func drawRainbowStroke(_ stroke: Stroke, in context: CGContext) {
-        // RAINBOW: Smooth gradient cycling through all rainbow colors with glow
-        let points = stroke.smoothedPoints(granularity: 3)
-        guard points.count > 1 else { return }
-
-        // Draw outer glow for dreamy rainbow effect
-        context.setLineWidth(stroke.lineWidth * 1.4)
-        for i in 0..<points.count - 1 {
-            let progress = CGFloat(i) / CGFloat(points.count)
-            let hue = fmod(progress * 2.0, 1.0) // Cycle through colors twice
-            let color = UIColor(hue: hue, saturation: 0.8, brightness: 1.0, alpha: 0.25)
-
-            context.setStrokeColor(color.cgColor)
-            context.beginPath()
-            context.move(to: points[i])
-            context.addLine(to: points[i + 1])
-            context.strokePath()
-        }
-
-        // Main rainbow stroke with vivid colors
-        context.setLineWidth(stroke.lineWidth)
-        for i in 0..<points.count - 1 {
-            let progress = CGFloat(i) / CGFloat(points.count)
-            let hue = fmod(progress * 2.0, 1.0)
-            let color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
-
-            context.setStrokeColor(color.cgColor)
-            context.beginPath()
-            context.move(to: points[i])
-            context.addLine(to: points[i + 1])
-            context.strokePath()
-        }
-
-        // Add white highlight for glossy effect
-        context.setLineWidth(stroke.lineWidth * 0.2)
-        context.setStrokeColor(UIColor.white.withAlphaComponent(0.5).cgColor)
-
-        context.beginPath()
-        let highlightOffset: CGFloat = -stroke.lineWidth * 0.3
-        for (index, point) in points.enumerated() {
-            let adjustedPoint = CGPoint(x: point.x + highlightOffset, y: point.y + highlightOffset)
-            if index == 0 {
-                context.move(to: adjustedPoint)
-            } else {
-                context.addLine(to: adjustedPoint)
-            }
-        }
-        context.strokePath()
-
-        // Add occasional sparkle accents
-        let rawPoints = stroke.points
-        for (index, point) in rawPoints.enumerated() where index % 8 == 0 {
-            let noise = deterministicNoise(point.position.x, point.position.y, seed: index)
-            if noise > 0.5 {
-                let sparkleSize = stroke.lineWidth * 0.4
-                let sparkleRect = CGRect(
-                    x: point.position.x - sparkleSize / 2,
-                    y: point.position.y - sparkleSize / 2,
-                    width: sparkleSize,
-                    height: sparkleSize
-                )
-                context.setFillColor(UIColor.white.withAlphaComponent(0.8).cgColor)
-                context.fillEllipse(in: sparkleRect)
-            }
-        }
+    private func drawStroke(_ stroke: Stroke, in context: CGContext, timeOffset: CFTimeInterval = 0) {
+        BrushRenderer.drawStroke(stroke, in: context, timeOffset: timeOffset)
     }
 
     // MARK: - Symmetry Methods
@@ -1231,117 +985,5 @@ class DrawingCanvas: UIView {
     func setDrawMode() {
         pendingCustomSticker = nil
         drawingMode = .draw
-    }
-
-    func setFillMode() {
-        drawingMode = .fill
-    }
-
-    // MARK: - Fill Methods
-
-    private func performFill(at point: CGPoint) {
-        // Create a snapshot of the current canvas
-        guard let snapshot = createCanvasSnapshot() else { return }
-
-        // Perform flood fill
-        guard let filledImage = FloodFill.fill(
-            in: snapshot,
-            at: point,
-            with: selectedColor,
-            tolerance: 40  // Kid-friendly tolerance
-        ) else {
-            // No fill needed (clicked on same color) - give feedback
-            SoundManager.shared.play(.tap)
-            SoundManager.shared.playHaptic(.light)
-            return
-        }
-
-        // Create fill region and add to document
-        let fillRegion = FillRegion(
-            color: selectedColor,
-            filledImage: filledImage,
-            bounds: bounds
-        )
-        document.addFill(fillRegion)
-
-        needsCacheUpdate = true
-        setNeedsDisplay()
-
-        // Success feedback
-        SoundManager.shared.play(.pop)
-        SoundManager.shared.playHaptic(.medium)
-
-        // Show fill animation
-        showFillAnimation(at: point)
-    }
-
-    private func createCanvasSnapshot() -> UIImage? {
-        let renderer = UIGraphicsImageRenderer(size: bounds.size)
-        return renderer.image { context in
-            // Draw background
-            document.backgroundColor.setFill()
-            context.fill(bounds)
-
-            // Draw existing fills
-            for fill in document.fills {
-                fill.filledImage.draw(at: .zero)
-            }
-
-            // Draw all strokes
-            for stroke in document.strokes {
-                drawStroke(stroke, in: context.cgContext)
-            }
-
-            // Draw all stamps
-            for stamp in document.stamps {
-                drawStamp(stamp, in: context.cgContext)
-            }
-        }
-    }
-
-    private func showFillAnimation(at position: CGPoint) {
-        // Paint splash effect
-        let splashView = UIView()
-        splashView.frame = CGRect(x: 0, y: 0, width: 60, height: 60)
-        splashView.center = position
-        splashView.backgroundColor = selectedColor.withAlphaComponent(0.6)
-        splashView.layer.cornerRadius = 30
-        splashView.alpha = 0
-        addSubview(splashView)
-
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseOut) {
-            splashView.transform = CGAffineTransform(scaleX: 3, y: 3)
-            splashView.alpha = 0.8
-        } completion: { _ in
-            UIView.animate(withDuration: 0.2) {
-                splashView.alpha = 0
-            } completion: { _ in
-                splashView.removeFromSuperview()
-            }
-        }
-
-        // Ripple rings
-        for i in 0..<3 {
-            let ringView = UIView()
-            ringView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
-            ringView.center = position
-            ringView.backgroundColor = .clear
-            ringView.layer.borderColor = selectedColor.cgColor
-            ringView.layer.borderWidth = 3
-            ringView.layer.cornerRadius = 10
-            ringView.alpha = 0
-            addSubview(ringView)
-
-            UIView.animate(withDuration: 0.5, delay: Double(i) * 0.1, options: .curveEaseOut) {
-                ringView.transform = CGAffineTransform(scaleX: 4 + CGFloat(i), y: 4 + CGFloat(i))
-                ringView.alpha = 0.6
-            } completion: { _ in
-                UIView.animate(withDuration: 0.2) {
-                    ringView.alpha = 0
-                } completion: { _ in
-                    ringView.removeFromSuperview()
-                }
-            }
-        }
     }
 }

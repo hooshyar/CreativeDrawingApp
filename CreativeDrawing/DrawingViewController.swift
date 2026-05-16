@@ -229,6 +229,9 @@ class DrawingViewController: UIViewController {
         canvas.document.reset()
         currentDrawingId = DrawingStorage.shared.startNewDrawing()
         hasUnsavedChanges = false
+
+        // Reset dark mode button to light mode (new drawings start white)
+        syncDarkModeButtonState()
     }
 
     /// Load an existing drawing
@@ -250,6 +253,9 @@ class DrawingViewController: UIViewController {
         currentDrawingId = id
         hasUnsavedChanges = false
         canvas.setNeedsDisplay()
+
+        // Sync dark mode button state with loaded background
+        syncDarkModeButtonState()
 
         // Show drawing name
         if let metadata = DrawingStorage.shared.getMetadata(id: id) {
@@ -539,13 +545,6 @@ extension DrawingViewController: ToolbarDelegate {
         }
     }
 
-    func toolbarDidTapFill(_ toolbar: ToolbarView) {
-        canvas.setFillMode()
-        hideStampPicker()
-        hideBackgroundPicker()
-        showToast(message: "Tap to fill!")
-    }
-
     func toolbarDidTapSymmetry(_ toolbar: ToolbarView) {
         canvas.cycleSymmetryMode()
         toolbar.updateSymmetryButton(mode: canvas.symmetryMode)
@@ -563,6 +562,71 @@ extension DrawingViewController: ToolbarDelegate {
             modeDescription = "Kaleidoscope - 4-way magic!"
         }
         showToast(message: modeDescription)
+    }
+
+    func toolbarDidTapAnimation(_ toolbar: ToolbarView) {
+        hideStampPicker()
+        hideBackgroundPicker()
+        showAnimationPreview()
+    }
+
+    func toolbarDidTapDarkMode(_ toolbar: ToolbarView) {
+        toggleDarkMode()
+    }
+}
+
+// MARK: - Dark Mode Toggle
+
+extension DrawingViewController {
+
+    /// Check if a color is considered dark (for dark mode button state)
+    private func isColorDark(_ color: UIColor) -> Bool {
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        let brightness = (red + green + blue) / 3.0
+        return brightness < 0.1
+    }
+
+    /// Sync the dark mode button state with the current background color
+    func syncDarkModeButtonState() {
+        let isDark = isColorDark(canvas.document.backgroundColor)
+        toolbar.updateDarkModeButton(isDarkMode: isDark)
+    }
+
+    private func toggleDarkMode() {
+        let isDark = isColorDark(canvas.document.backgroundColor)
+
+        if isDark {
+            // Switch to white (light mode)
+            canvas.setBackgroundColor(.white)
+            toolbar.updateDarkModeButton(isDarkMode: false)
+            showToast(message: "Light mode")
+        } else {
+            // Switch to black (dark mode / chalkboard)
+            canvas.setBackgroundColor(.black)
+            toolbar.updateDarkModeButton(isDarkMode: true)
+            showToast(message: "Chalkboard mode")
+        }
+
+        hasUnsavedChanges = true
+    }
+}
+
+// MARK: - Animation Preview
+
+extension DrawingViewController {
+
+    private func showAnimationPreview() {
+        // Check if there are strokes to animate
+        guard !canvas.document.strokes.isEmpty else {
+            showToast(message: "Draw something first!")
+            return
+        }
+
+        let previewVC = AnimationPreviewController()
+        previewVC.configure(with: canvas.document, canvasSize: canvas.bounds.size)
+        previewVC.modalPresentationStyle = .fullScreen
+        present(previewVC, animated: true)
     }
 }
 
@@ -818,6 +882,8 @@ extension DrawingViewController: BackgroundPickerDelegate {
     func backgroundPicker(_ picker: BackgroundPickerView, didSelectColor color: UIColor) {
         canvas.setBackgroundColor(color)
         hasUnsavedChanges = true
+        // Sync dark mode button state with new background color
+        syncDarkModeButtonState()
     }
 
     func backgroundPickerDidClose(_ picker: BackgroundPickerView) {

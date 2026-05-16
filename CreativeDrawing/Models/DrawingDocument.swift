@@ -186,7 +186,10 @@ class DrawingDocument {
 
     /// Export the drawing as an image
     func exportAsImage(size: CGSize, scale: CGFloat = UIScreen.main.scale) -> UIImage? {
-        let renderer = UIGraphicsImageRenderer(size: size)
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = scale
+
+        let renderer = UIGraphicsImageRenderer(size: size, format: format)
 
         return renderer.image { context in
             // Fill background
@@ -198,12 +201,24 @@ class DrawingDocument {
                 fill.filledImage.draw(at: .zero)
             }
 
-            // Draw all strokes
-            for stroke in strokes {
-                drawStroke(stroke, in: context.cgContext)
+            // Render strokes on a transparent buffer so eraser works correctly
+            // Eraser strokes use .clear blend mode which punches holes in transparent buffers
+            let strokeFormat = UIGraphicsImageRendererFormat()
+            strokeFormat.scale = scale
+            strokeFormat.opaque = false  // CRITICAL for eraser to work
+
+            let strokeRenderer = UIGraphicsImageRenderer(size: size, format: strokeFormat)
+            let strokesImage = strokeRenderer.image { strokeContext in
+                // Draw all strokes in chronological order on transparent buffer
+                for stroke in strokes {
+                    drawStroke(stroke, in: strokeContext.cgContext)
+                }
             }
 
-            // Draw all stamps
+            // Composite the transparent strokes image onto the background
+            strokesImage.draw(at: .zero)
+
+            // Draw all stamps on top (stamps are not affected by eraser)
             for stamp in stamps {
                 drawStamp(stamp, in: context.cgContext)
             }
